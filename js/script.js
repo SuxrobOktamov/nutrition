@@ -138,18 +138,19 @@ check.addEventListener('click', (e)=>{
     if(!e.target.classList.contains('checked') && e.target.classList.contains('start')){
         e.target.classList.add('checked');
         menuList.classList.add('active');
-        select.innerHTML = title.length;
+        
         title.forEach(item=>{
             item.classList.add('check');
         })
+        allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
+        select.innerHTML = allArr.length;
     }else{
         e.target.classList.remove('checked');
         menuList.classList.remove('active');
         
         title.forEach(item=>{
-            item.classList.remove('check');
-           
-        });
+            item.classList.remove('check'); 
+        });  
     }
 })
 
@@ -163,9 +164,12 @@ title.forEach((item)=>{
             item.classList.remove('check');
            
         }
-        let filt = Array.from(title);
-        allArr = filt.filter((item)=>item.classList.contains('check'));
+        allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
         select.innerHTML = allArr.length;
+        if( allArr.length == 0 ){
+            check.classList.remove('checked');
+            menuList.classList.remove('active');
+        }
     })
 })
 
@@ -174,8 +178,7 @@ menu1.addEventListener('click',()=>{
     check.classList.remove('checked');
     menuList.classList.remove('active');
     let topArr = [];
-    let filt = Array.from(title);
-    topArr = filt.filter((item)=> !item.classList.contains('check'));
+    topArr = Array.from(title).filter((item)=> !item.classList.contains('check'));
     tbody.innerHTML = '';
     topArr.forEach((item)=>{
         tbody.appendChild(item);
@@ -190,8 +193,6 @@ let rate1 = document.querySelector('#rate1');
 
 
 selected.addEventListener('change',(e)=>{
-    
-    console.log(e.target.value);
     if( e.target.value == 5 ){
         rate.innerHTML = 1;
         rate1.innerHTML = 5;
@@ -218,8 +219,6 @@ selected.addEventListener('change',(e)=>{
         })
     }
 });
-
-
 
 left.addEventListener('click',()=>{
      if(selected.value == 10){
