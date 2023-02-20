@@ -53,7 +53,7 @@ table{
 
 .calors span {
     position: absolute;
-    left: 100px;
+    left: 60px;
     top: 24%;
 }
 
@@ -233,7 +233,7 @@ thead .start.checked>span:nth-child(2){
 #icon {
     position: absolute;
     top: 14px;
-    left: 24%;
+    left: 217px;
     opacity: .7;
     visibility: hidden;
 }
@@ -249,7 +249,7 @@ thead .start.checked>span:nth-child(2){
 .icon span {
     position: absolute;
     top: 14px;
-    left: 55%;
+    left: 80px;
     opacity: .7;
     visibility: hidden;
 }
