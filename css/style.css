@@ -1,0 +1,263 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+table, th, td {
+   text-align: end;
+   padding: 15px;
+   border-bottom: 1px solid #ccc;
+   border-collapse: collapse;
+}
+
+tr {
+    transition: .1s ease-in-out;
+}
+
+tr:hover {
+    /* cursor: pointer; */
+    background-color: #eee;
+}
+
+table{
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.start{
+    position: relative;
+    cursor: pointer;
+    text-align: start;
+    padding-left: 50px;
+}
+
+.start span {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
+
+.calors {
+    position: relative;
+}
+
+.calors span {
+    position: absolute;
+    left: 100px;
+    top: 24%;
+}
+
+.nutrition{
+    position: relative;
+    width: 90%;
+    padding: 20px 0 0 0;
+    margin: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-top: none;
+    box-shadow: 0px 1px 8px 0px #c1c1c1;
+    overflow: hidden;
+    height: 455px;
+}
+
+thead {
+    position: relative;
+    width: 100%;
+    height: 52px;
+}
+
+thead tr {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.25fr 0.25fr 0.25fr .25fr;
+    z-index: 100;
+    background: #FFF;
+}
+
+#menu {
+    display: block;
+}
+
+#menu1 {
+    display: none;
+}
+
+.active #menu {
+    display: none;
+}
+
+.active #menu1 {
+    display: block;
+}
+
+h2 {
+    display: block;
+}
+
+.menu p {
+    display: none;
+    
+}
+
+.active h2 {
+    display: none;
+}
+
+.active p, .active span {
+    display: inline;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+
+#left {
+    opacity: .6;
+}
+
+.page-div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    grid-column-gap: 20px;
+}
+
+select:focus, select {
+    border: none;
+    outline: none;
+}
+
+.menu {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu h2 {
+    font-size: 25px;
+}
+
+h3 {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    padding-left: 55px;
+}
+
+h3::before {
+    content: ' ';
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 50px;
+    height: 18px;
+    background-color: #c5c5c5;
+    border-radius: 20px;
+}
+
+h3::after {
+    content: ' ';
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 1px #878787;
+    transition: 0.4s ease;
+}
+
+.menu_list {
+    text-align: end;
+}
+
+/* check */
+
+.check .type>span:nth-child(1){
+    display: block;
+}
+
+.check .type>span:nth-child(2){
+    display: none;
+}
+
+.type>span:nth-child(1){
+    display: none;
+}
+
+.type>span:nth-child(2){
+    display: block;
+}
+
+thead .start>span:nth-child(1){
+    display: block;
+}
+
+thead .start>span:nth-child(2){
+    display: none;
+}
+
+thead .start.checked>span:nth-child(1){
+    display: none;
+}
+
+thead .start.checked>span:nth-child(2){
+    display: block;
+}
+
+#icon {
+    position: absolute;
+    top: 14px;
+    left: 24%;
+    opacity: .7;
+    visibility: hidden;
+}
+
+#check:hover #icon {
+    visibility: visible;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon span {
+    position: absolute;
+    top: 14px;
+    left: 55%;
+    opacity: .7;
+    visibility: hidden;
+}
+
+.icon:hover span {
+    visibility: visible;
+}
+
+.active {
+    background-color: #d3dfe9;
+}
