@@ -131,18 +131,16 @@ let menuList = document.querySelector('.menu');
 let menu1 = document.querySelector('#menu1');
 
 let select = document.querySelector('#span');
-let allArr = [];
-
 
 check.addEventListener('click', (e)=>{
-    if(!e.target.classList.contains('checked') && e.target.classList.contains('start')){
+   if(!e.target.classList.contains('checked') && e.target.classList.contains('start')){
         e.target.classList.add('checked');
         menuList.classList.add('active');
         
         title.forEach(item=>{
             item.classList.add('check');
         })
-        allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
+        let allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
         select.innerHTML = allArr.length;
     }else{
         e.target.classList.remove('checked');
@@ -164,7 +162,7 @@ title.forEach((item)=>{
             item.classList.remove('check');
            
         }
-        allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
+        let allArr = Array.from(title).filter((item)=>item.classList.contains('check'));
         select.innerHTML = allArr.length;
         if( allArr.length == 0 ){
             check.classList.remove('checked');
